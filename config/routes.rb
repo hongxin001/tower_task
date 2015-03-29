@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+  resources :action_two_parameters
+
+  resources :action_one_parameters
+
+  resources :events
+
+  resources :accesses
+
+  resources :projects
+
+  resources :todos
+
+  resources :comments
+
+  resources :users
+
+  resources :teams
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

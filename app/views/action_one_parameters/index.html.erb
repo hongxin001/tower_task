@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Action One Parameters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @action_one_parameters.each do |action_one_parameter| %>
+      <tr>
+        <td><%= action_one_parameter.parameter %></td>
+        <td><%= link_to 'Show', action_one_parameter %></td>
+        <td><%= link_to 'Edit', edit_action_one_parameter_path(action_one_parameter) %></td>
+        <td><%= link_to 'Destroy', action_one_parameter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Action one parameter', new_action_one_parameter_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Action Two Parameters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter 1</th>
+      <th>Parameter 2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @action_two_parameters.each do |action_two_parameter| %>
+      <tr>
+        <td><%= action_two_parameter.parameter_1 %></td>
+        <td><%= action_two_parameter.parameter_2 %></td>
+        <td><%= link_to 'Show', action_two_parameter %></td>
+        <td><%= link_to 'Edit', edit_action_two_parameter_path(action_two_parameter) %></td>
+        <td><%= link_to 'Destroy', action_two_parameter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Action two parameter', new_action_two_parameter_path %>

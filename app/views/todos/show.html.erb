@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @todo.content %>
+</p>
+
+<p>
+  <strong>To user:</strong>
+  <%= @todo.to_user_id %>
+</p>
+
+<p>
+  <strong>From user:</strong>
+  <%= @todo.from_user_id %>
+</p>
+
+<p>
+  <strong>To time:</strong>
+  <%= @todo.to_time %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @todo.project_id %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @todo.team_id %>
+</p>
+
+<p>
+  <strong>Is deleted:</strong>
+  <%= @todo.is_deleted %>
+</p>
+
+<p>
+  <strong>Is completed:</strong>
+  <%= @todo.is_completed %>
+</p>
+
+<%= link_to 'Edit', edit_todo_path(@todo) %> |
+<%= link_to 'Back', todos_path %>
