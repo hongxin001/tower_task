@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150329054712) do
+ActiveRecord::Schema.define(version: 20150329115947) do
 
   create_table "accesses", force: :cascade do |t|
     t.integer  "project_id"
@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 20150329054712) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "action_with_comments", force: :cascade do |t|
+    t.string   "comment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comments", force: :cascade do |t|
     t.text     "content"
     t.integer  "todo_id"
@@ -43,11 +49,11 @@ ActiveRecord::Schema.define(version: 20150329054712) do
   create_table "events", force: :cascade do |t|
     t.integer  "project_id"
     t.integer  "user_id"
-    t.integer  "type"
+    t.integer  "action_type"
     t.integer  "action_id"
     t.integer  "target_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "projects", force: :cascade do |t|

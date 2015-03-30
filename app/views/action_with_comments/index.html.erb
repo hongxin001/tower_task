@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Action With Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @action_with_comments.each do |action_with_comment| %>
+      <tr>
+        <td><%= action_with_comment.comment_id %></td>
+        <td><%= link_to 'Show', action_with_comment %></td>
+        <td><%= link_to 'Edit', edit_action_with_comment_path(action_with_comment) %></td>
+        <td><%= link_to 'Destroy', action_with_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Action with comment', new_action_with_comment_path %>

@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.all.order("created_at DESC").limit(50)
   end
 
   # GET /events/1
@@ -69,6 +69,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:project_id, :user_id, :type, :action_id, :target_id)
+      params.require(:event).permit(:project_id, :user_id, :action_type, :action_id, :target_id)
     end
 end

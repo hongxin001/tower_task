@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :action_with_comments
+
   resources :action_two_parameters
 
   resources :action_one_parameters

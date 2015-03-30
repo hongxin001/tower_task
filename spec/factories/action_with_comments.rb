@@ -1,11 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :event do
-    project_id 1
-    user_id 1
-    action_type 1
-    action_id 1
-    target_id 1
+  factory :action_with_comment do
+    comment_id "MyString"
   end
 end
