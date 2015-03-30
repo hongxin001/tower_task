@@ -10,3 +10,7 @@ This task is a rebuilding for the display of events and based on ruby on rails.
 * database:sqlite 3 (for test)
 * test suite:rspec
 
+###The initial model
+![image](app/assets/images/data.png)
+
+then add the model ActionWithComments like ActionOneParameter.
