@@ -14,3 +14,4 @@ This task is a rebuilding for the display of events and based on ruby on rails.
 ![image](app/assets/images/data.png)
 
 then add the model ActionWithComments like ActionOneParameter.
+ps: In this model ,we ignore some unnecessary relationship.
